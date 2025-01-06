@@ -30,9 +30,13 @@
   {
    	"firstName":"Anaya",
    	"lastName":"Sohail"	
-   },
-   {
-      	"firstName":"Ayat",
-      	"lastName":"waqas"	
-      }
+  },
+  {
+      "firstName":"Ayat",
+      "lastName":"waqas"	
+ },
+ {
+	   "firstName":"Musa",
+	   "lastName":"Amjab"	
+ }
  ]
