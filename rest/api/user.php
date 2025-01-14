@@ -1,15 +1,8 @@
 [
  {
-	"firstName":"Abdul -",
-	"lastName":"Kareem"	
- },
- {
- 	"firstName":"Sohail",
- 	"lastName":"Ahmed"	
-  }	,
- {
- 	"firstName":"Waqas",
- 	"lastName":"Ahmed."	
+	"firstName":"Abdul",
+	"lastName":"Kareem",
+	"orderCode":99
  },
  {
  	"firstName":"Fatima",
@@ -18,6 +11,7 @@
  {
  	"firstName":"Ayesha",
  	"lastName":"Jabbar"	
+<<<<<<< HEAD
 	"orderCode":91
  },
  {
@@ -44,4 +38,7 @@
     	   "firstName":"Ali",
     	   "lastName":"waqas"	
      }
+=======
+ }
+>>>>>>> 42900287b6a275cf0939f4f6ddbd77df389d7482
  ]
