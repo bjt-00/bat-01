@@ -36,7 +36,11 @@
       "lastName":"waqas"	
  },
  {
-	   "firstName":"Musa",
-	   "lastName":"Amjab"	
- }
+  	   "firstName":"Musa",
+  	   "lastName":"Amjab"	
+   },
+   {
+    	   "firstName":"Ali",
+    	   "lastName":"waqas"	
+     }
  ]
