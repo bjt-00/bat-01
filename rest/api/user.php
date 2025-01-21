@@ -12,30 +12,6 @@
  {
  	"firstName":"Ayesha",
  	"lastName":"Jabbar"
-	"orderCode":95
- },
- {
- 	"firstName":"Abdul",
- 	"lastName":"Jabbar"	
- },
- {
-  	"firstName":"Harwat",
-  	"lastName":"Amjab"	
-  },
-  {
-   	"firstName":"Anaya",
-   	"lastName":"Sohail"	
-  },
-  {
-      "firstName":"Ayat",
-      "lastName":"waqas"	
- },
- {
-  	   "firstName":"Musa",
-  	   "lastName":"Amjab"	
-   },
-   {
-    	   "firstName":"Ali",
-    	   "lastName":"waqas"	
+	"orderCode":95	
      }
  ]
