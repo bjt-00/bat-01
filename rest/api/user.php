@@ -38,7 +38,4 @@
     	   "firstName":"Ali",
     	   "lastName":"waqas"	
      }
-=======
- }
->>>>>>> 42900287b6a275cf0939f4f6ddbd77df389d7482
  ]
