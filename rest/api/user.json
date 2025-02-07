@@ -1,17 +1,1 @@
-[
- {
-	"firstName":"Abdul",
-	"lastName":"Kareem",
-	"orderCode":99
- },
- {
- 	"firstName":"Fatima",
- 	"lastName":"Jabbar",	
-	"ordercode":100
- },
- {
- 	"firstName":"Ayesha",
- 	"lastName":"Jabbar",
-	"orderCode":95
-  }
- ]
+[{"firstName":"abdul","lastName":"k","orderCode":2}]

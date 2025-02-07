@@ -42,17 +42,32 @@
 		$json = $this->getUserList();
 		$json = json_decode($json);
 
+		//remove null objects
 		$totalUsers = count($json);
+		
 		for($i=0;$i<$totalUsers;$i++) {
 			$user = $json[$i];
 			if($user->orderCode==$orderCode){
 				$json[$i] = null;
-				//$json = array_diff($json,$user);
+				$json = $this->filterUserList($json);
 				file_put_contents($this->file, json_encode($json));
-				return $orderCode.' deleted successfully';
+				return $user->firstName.' deleted successfully';
 			}
 		}
 		return "User not found with given orderCode:".$orderCode;
+	}
+	function filterUserList($userList){
+	    
+	    $activeUserList = array();
+	    $totalUsers = count($userList);
+	    for($i=0;$i<$totalUsers;$i++) {
+	        $user = $userList[$i];
+	        //remove null objects and pick not null only
+	        if(null!=$user){
+	            array_push($activeUserList, $user);
+	        }
+	    }
+	    return $activeUserList;
 	}
 }
 ?>
