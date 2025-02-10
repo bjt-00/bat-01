@@ -7,11 +7,11 @@
  {
  	"firstName":"Fatima",
  	"lastName":"Jabbar"	
-	"ordercode":100
+	"orderCode":100
  },
  {
  	"firstName":"Ayesha",
  	"lastName":"Jabbar"
 	"orderCode":95
-  }
+ }
  ]
