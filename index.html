@@ -1,68 +1,141 @@
+<!DOCTYPE html>
 <html>
 <head>
-<title>BAT-01:: Rest API Training</title>
+  <meta charset="UTF-8">
+  <title>REST API Training</title>
+  <style>
+    .panel-group {
+      margin: 20px;
+    }
+    .panel {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .panel-heading {
+      background-color: #f5f5f5;
+      padding: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .panel-body {
+      display: none;
+      padding: 10px;
+    }
+    iframe {
+      width: 100%;
+      height: 400px;
+      border: none;
+    }
+  </style>
+  <script>
+    function togglePanel(panelId) {
+      var panels = document.querySelectorAll('.panel-body');
+      panels.forEach(function(panel) {
+        if (panel.id === panelId) {
+          panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
+        } else {
+          panel.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </head>
 <body>
-<h1>BAT-01: Rest API Training</h1>
 
-<fieldset>
-<legend>Training Contents</legend>
-<iframe src="https://www.bitguiders.com/view/contents/training/details/BAT-01-contents.php" style="width:100%"></iframe>
-</fieldset>
+  <!-- Only One Heading -->
+  <h1>BAT-01: Rest API Training</h1>
 
-<fieldset>
-<legend>Setup</legend>
-<ol>
-    <li>Step-I(a): <a href="https://www.postman.com/downloads/">Install Postman</a></li>
-	<li>Step-I(b): <a href="https://github.com/">Create account in github</a></li>
-	<li>Step-II:
-	<a href="https://desktop.github.com/?ref_cta=download+desktop&ref_loc=installing+github+desktop&ref_page=docs" target="new">Github Desktop Installantion</a>
-	<br>or<br>
-	<a href="https://www.bitguiders.com/training/downloads/GitHubDesktopSetup-x64.zip" target="new">Github Desktop Zip Download</a>
-	<br>or<br>
-	<a href="https://git-scm.com/download/win" tar
-	get="new">64-bit Git for Windows Setup.</a>
-	<p><b>Verify Git installation:</b> open cmd and type 'git' if you can see usage git commands it means installation is successful</p>
-	</li>
-	<!-- https://jdk.java.net/22/ -->
-	<li>Step-III:
-	<a href="https://www.bitguiders.com/training/downloads/jdk-16.0.1_windows-x64_bin.exe" target="new">JDK-16.0.1 Download</a>
-	<br>
-	<a href="https://www.bitguiders.com/training/downloads/jdk-21.0.3_windows-x64_bin.exe" target="new">JDK-21.0.3 Download</a>
-	<!--a href="https://download.java.net/java/GA/jdk22.0.1/c7ec1332f7bb44aeba2eb341ae18aca4/8/GPL/openjdk-22.0.1_windows-x64_bin.zip" target="new">download JDK 22 (windows x64)</a-->
-	<p><b>Verify JDK Installation:</b> Open CMD and type 'java -version' if you can see java version that means installation is successful </p>
-	</li>
-	<li>Step-IV:
-	<!-- a href="https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2024-06/R/eclipse-jee-2024-06-R-win32-x86_64.zip" target="new">Eclipse IDE for JEE (windows x86_64)</a>
-	<br>or<br-->
-	<a href="https://www.bitguiders.com/training/downloads/eclipse-jee-2018-09-win32-x86_64.zip" target="new">Eclipse JEE IDE Zip Download</a>
-	<br>
-	<a href="https://www.bitguiders.com/training/downloads/eclipse-php-2018-09-win32-x86_64.zip" target="new">Eclipse PHP IDE Zip Download</a>
-	</li>
-</ol>
-</fieldset>
+  <!-- Only One Training Content (iframe) -->
+  <fieldset>
+    <legend>Training Contents</legend>
+    <iframe src="https://www.bitguiders.com/view/contents/training/details/BAT-01-contents.php"></iframe>
+  </fieldset>
 
-<fieldset>
-<legend>Registered Users</legend>
-<ol>
-	<li> <a href="view/99/index.html">Abdul Kareem-99</a> </li>
-<br>
-    <li> <a href="view/100/index.html">Fatima-100</a> </li>
-<br>
-    <li> <a href="view/95/index.html">Ayesha Jabbar-95</a> </li>    	
-</ol>
-</fieldset>
+  <!-- Collapsible Panels Start -->
+  <div class="panel-group" id="accordion">
+
+    <!-- Group 1: Users -->
+    <div class="panel panel-default">
+      <div class="panel-heading" onclick="togglePanel('usersPanel')">
+        Users
+      </div>
+      <div class="panel-body" id="usersPanel">
+        <ol>
+          <li><a href="#">Abdul Kareem - 99</a></li>
+          <li><a href="#">Fatima - 100</a></li>
+          <li><a href="#">Ayesha Jabbar - 95</a></li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Group 2: Setup -->
+    <div class="panel panel-default">
+      <div class="panel-heading" onclick="togglePanel('setupPanel')">
+        Setup
+      </div>
+      <div class="panel-body" id="setupPanel">
+        <ol>
+          <li>
+            Step-I(a): <a href="https://www.postman.com/downloads/" target="_blank">Install Postman</a>
+          </li>
+          <li>
+            Step-I(b): <a href="https://github.com/signup" target="_blank">Create GitHub account</a>
+          </li>
+          <li>
+            Step-II: 
+            <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a><br>
+            or <a href="https://git-scm.com/download/win" target="_blank">Git for Windows</a><br><br>
+            <strong>Check Git installation:</strong> Open CMD and type <code>git</code>.
+          </li>
+          <li>
+            Step-III: 
+            <a href="https://www.oracle.com/java/technologies/javase/jdk16-archive-downloads.html" target="_blank">Download JDK 16</a><br>
+            <a href="https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html" target="_blank">Download JDK 21</a><br><br>
+            <strong>Check JDK:</strong> Open CMD → <code>java -version</code>
+          </li>
+          <li>
+            Step-IV: 
+            <a href="https://www.eclipse.org/downloads/packages/release" target="_blank">Download Eclipse IDE</a>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Group 3: Git Repo + Postman -->
+    <div class="panel panel-default">
+      <div class="panel-heading" onclick="togglePanel('repoPanel')">
+        Git Repo + Postman
+      </div>
+      <div class="panel-body" id="repoPanel">
+        <ul>
+          <li><a href="https://github.com/bitguiders-training/bat-01" target="_blank">GitHub: BAT-01</a></li>
+          <li><a href="https://www.postman.com/collections" target="_blank">Postman Collections</a></li>
+        </ul>
+        <h4>Other Repositories</h4>
+        <ul>
+          <li><a href="#">git bat-01</a></li>
+          <li><a href="#">git bat-02</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Group 4: FAQ -->
+    <div class="panel panel-default">
+      <div class="panel-heading" onclick="togglePanel('faqPanel')">
+        Frequently Asked Questions
+      </div>
+      <div class="panel-body" id="faqPanel">
+        <ul>
+          <li>What is a REST API?</li>
+          <li>How to test API with Postman?</li>
+          <li>What to do if Git gives access denied?</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+  <!-- Collapsible Panels End -->
+
 </body>
 </html>
-</fieldset>
-
-<fieldset>
-<legend>git repositories</legend>
-<ol>
-	<li> <a href="https://github.com/bjt-00/bat-01">git bat-01</a> </li>
-<br>
-    <li> <a href="https://github.com/bjt-00/bat-02">git bat-02</a> </li>	
-</fieldset>
-</body>
-</html>
-</fieldset>
