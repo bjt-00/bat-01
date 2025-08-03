@@ -43,21 +43,19 @@
 </head>
 <body>
 
+  <!-- Only One Heading -->
   <h1>BAT-01: Rest API Training</h1>
 
+  <!-- Only One Training Content (iframe) -->
+  <fieldset>
+    <legend>Training Contents</legend>
+    <iframe src="https://www.bitguiders.com/view/contents/training/details/BAT-01-contents.php"></iframe>
+  </fieldset>
+
+  <!-- Collapsible Panels Start -->
   <div class="panel-group" id="accordion">
 
-    <!-- Group 1: Training Content (Now collapsible) -->
-    <div class="panel panel-default">
-      <div class="panel-heading" onclick="togglePanel('trainingContentPanel')">
-        Training Contents
-      </div>
-      <div class="panel-body" id="trainingContentPanel">
-        <iframe src="https://www.bitguiders.com/view/contents/training/details/BAT-01-contents.php"></iframe>
-      </div>
-    </div>
-
-    <!-- Group 2: Users -->
+    <!-- Group 1: Users -->
     <div class="panel panel-default">
       <div class="panel-heading" onclick="togglePanel('usersPanel')">
         Users
@@ -71,7 +69,7 @@
       </div>
     </div>
 
-    <!-- Group 3: Setup -->
+    <!-- Group 2: Setup -->
     <div class="panel panel-default">
       <div class="panel-heading" onclick="togglePanel('setupPanel')">
         Setup
@@ -104,7 +102,7 @@
       </div>
     </div>
 
-    <!-- Group 4: Git Repo + Postman -->
+    <!-- Group 3: Git Repo + Postman -->
     <div class="panel panel-default">
       <div class="panel-heading" onclick="togglePanel('repoPanel')">
         Git Repo + Postman
@@ -122,7 +120,7 @@
       </div>
     </div>
 
-    <!-- Group 5: FAQ -->
+    <!-- Group 4: FAQ -->
     <div class="panel panel-default">
       <div class="panel-heading" onclick="togglePanel('faqPanel')">
         Frequently Asked Questions
@@ -137,6 +135,7 @@
     </div>
 
   </div>
+  <!-- Collapsible Panels End -->
 
 </body>
 </html>
