@@ -32,28 +32,28 @@
     function togglePanel(panelId) {
       var panels = document.querySelectorAll('.panel-body');
       panels.forEach(function(panel) {
-        if (panel.id === panelId) {
-          panel.style.display = (panel.style.display === 'block') ? 'none' : 'block';
-        } else {
-          panel.style.display = 'none';
-        }
+        panel.style.display = (panel.id === panelId) ? 
+          (panel.style.display === 'block' ? 'none' : 'block') 
+          : 'none';
       });
     }
   </script>
 </head>
 <body>
 
-  <!-- Only One Heading -->
   <h1>BAT-01: Rest API Training</h1>
 
-  <!-- Only One Training Content (iframe) -->
-  <fieldset>
-    <legend>Training Contents</legend>
-    <iframe src="https://www.bitguiders.com/view/contents/training/details/BAT-01-contents.php"></iframe>
-  </fieldset>
-
-  <!-- Collapsible Panels Start -->
   <div class="panel-group" id="accordion">
+
+    <!-- Group 0: Training Contents (iframe) -->
+    <div class="panel panel-default">
+      <div class="panel-heading" onclick="togglePanel('trainingPanel')">
+        Training Contents
+      </div>
+      <div class="panel-body" id="trainingPanel">
+        <iframe src="https://www.bitguiders.com/view/contents/training/details/BAT-01-contents.php"></iframe>
+      </div>
+    </div>
 
     <!-- Group 1: Users -->
     <div class="panel panel-default">
@@ -76,12 +76,8 @@
       </div>
       <div class="panel-body" id="setupPanel">
         <ol>
-          <li>
-            Step-I(a): <a href="https://www.postman.com/downloads/" target="_blank">Install Postman</a>
-          </li>
-          <li>
-            Step-I(b): <a href="https://github.com/signup" target="_blank">Create GitHub account</a>
-          </li>
+          <li>Step-I(a): <a href="https://www.postman.com/downloads/" target="_blank">Install Postman</a></li>
+          <li>Step-I(b): <a href="https://github.com/signup" target="_blank">Create GitHub account</a></li>
           <li>
             Step-II: 
             <a href="https://desktop.github.com/" target="_blank">GitHub Desktop</a><br>
@@ -135,7 +131,6 @@
     </div>
 
   </div>
-  <!-- Collapsible Panels End -->
 
 </body>
 </html>
